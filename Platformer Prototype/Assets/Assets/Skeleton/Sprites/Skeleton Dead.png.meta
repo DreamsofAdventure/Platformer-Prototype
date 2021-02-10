@@ -1,52 +1,52 @@
 fileFormatVersion: 2
-guid: 311794980f9e62e43b4a646b74fce127
+guid: 82ff2a3829a8ef842a3e949bb493ec05
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2462726258303309692
-    second: noBKG_KnightDeath_strip_0
+      213: -2857231490776680268
+    second: Skeleton Dead_0
   - first:
-      213: 800447926069038329
-    second: noBKG_KnightDeath_strip_1
+      213: -4556957111438124803
+    second: Skeleton Dead_1
   - first:
-      213: -946747365951844226
-    second: noBKG_KnightDeath_strip_2
+      213: 8229228023718284102
+    second: Skeleton Dead_2
   - first:
-      213: -6628401973600079656
-    second: noBKG_KnightDeath_strip_3
+      213: -6944830649617365068
+    second: Skeleton Dead_3
   - first:
-      213: 4434692913647792918
-    second: noBKG_KnightDeath_strip_4
+      213: -1970192786815392063
+    second: Skeleton Dead_4
   - first:
-      213: -2310986920892945031
-    second: noBKG_KnightDeath_strip_5
+      213: 2483693351843143494
+    second: Skeleton Dead_5
   - first:
-      213: -9019668959965462625
-    second: noBKG_KnightDeath_strip_6
+      213: 6466916566069523921
+    second: Skeleton Dead_6
   - first:
-      213: -8498603672155398073
-    second: noBKG_KnightDeath_strip_7
+      213: 3101976986349042786
+    second: Skeleton Dead_7
   - first:
-      213: 4445640418960089077
-    second: noBKG_KnightDeath_strip_8
+      213: -926204492896737425
+    second: Skeleton Dead_8
   - first:
-      213: -467494461951899089
-    second: noBKG_KnightDeath_strip_9
+      213: -7914734902640995259
+    second: Skeleton Dead_9
   - first:
-      213: 4431850097328097444
-    second: noBKG_KnightDeath_strip_10
+      213: -4228536494974795197
+    second: Skeleton Dead_10
   - first:
-      213: 4835687150137037479
-    second: noBKG_KnightDeath_strip_11
+      213: -6434160970422584577
+    second: Skeleton Dead_11
   - first:
-      213: -7371909421828567154
-    second: noBKG_KnightDeath_strip_12
+      213: 4545027865677980425
+    second: Skeleton Dead_12
   - first:
-      213: -2056779964345312378
-    second: noBKG_KnightDeath_strip_13
+      213: -6589485293158612270
+    second: Skeleton Dead_13
   - first:
-      213: 9069958394531976135
-    second: noBKG_KnightDeath_strip_14
+      213: 7046719443616025468
+    second: Skeleton Dead_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -110,7 +110,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -122,7 +122,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -134,7 +134,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -146,7 +146,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -158,7 +158,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -170,7 +170,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -184,316 +184,316 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_0
+      name: Skeleton Dead_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 488edc22483a2ddd0800000000000000
-      internalID: -2462726258303309692
+      spriteID: 4b8323fe8131958d0800000000000000
+      internalID: -2857231490776680268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_1
+      name: Skeleton Dead_1
       rect:
         serializedVersion: 2
-        x: 96
+        x: 33
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fc0b86d523cb1b00800000000000000
-      internalID: 800447926069038329
+      spriteID: df85a04a6af62c0c0800000000000000
+      internalID: -4556957111438124803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_2
+      name: Skeleton Dead_2
       rect:
         serializedVersion: 2
-        x: 192
+        x: 66
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e705768694a7cd2f0800000000000000
-      internalID: -946747365951844226
+      spriteID: 64b0b698947143270800000000000000
+      internalID: 8229228023718284102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_3
+      name: Skeleton Dead_3
       rect:
         serializedVersion: 2
-        x: 288
+        x: 99
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d0b117168f2304a0800000000000000
-      internalID: -6628401973600079656
+      spriteID: 4b7cf48c1510f9f90800000000000000
+      internalID: -6944830649617365068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_4
+      name: Skeleton Dead_4
       rect:
         serializedVersion: 2
-        x: 384
+        x: 132
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6133bed75b13b8d30800000000000000
-      internalID: 4434692913647792918
+      spriteID: 1c6e4d2591878a4e0800000000000000
+      internalID: -1970192786815392063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_5
+      name: Skeleton Dead_5
       rect:
         serializedVersion: 2
-        x: 480
+        x: 165
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97d2a9bb3a9bdefd0800000000000000
-      internalID: -2310986920892945031
+      spriteID: 64f1c9fb1f9d77220800000000000000
+      internalID: 2483693351843143494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_6
+      name: Skeleton Dead_6
       rect:
         serializedVersion: 2
-        x: 576
+        x: 198
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9f34a18ed2b3d280800000000000000
-      internalID: -9019668959965462625
+      spriteID: 1d5b9a88a5a1fb950800000000000000
+      internalID: 6466916566069523921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_7
+      name: Skeleton Dead_7
       rect:
         serializedVersion: 2
-        x: 672
+        x: 231
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 740e85adcf4ee0a80800000000000000
-      internalID: -8498603672155398073
+      spriteID: 26c75c452af6c0b20800000000000000
+      internalID: 3101976986349042786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_8
+      name: Skeleton Dead_8
       rect:
         serializedVersion: 2
-        x: 768
+        x: 264
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ff1c33386612bd30800000000000000
-      internalID: 4445640418960089077
+      spriteID: f67e483cbe57523f0800000000000000
+      internalID: -926204492896737425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_9
+      name: Skeleton Dead_9
       rect:
         serializedVersion: 2
-        x: 864
+        x: 297
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2a05e483402389f0800000000000000
-      internalID: -467494461951899089
+      spriteID: 54492b44a86392290800000000000000
+      internalID: -7914734902640995259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_10
+      name: Skeleton Dead_10
       rect:
         serializedVersion: 2
-        x: 960
+        x: 330
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a8850dbe28118d30800000000000000
-      internalID: 4431850097328097444
+      spriteID: 342804926783155c0800000000000000
+      internalID: -4228536494974795197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_11
+      name: Skeleton Dead_11
       rect:
         serializedVersion: 2
-        x: 1056
+        x: 363
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a2d6dca7dfcb1340800000000000000
-      internalID: 4835687150137037479
+      spriteID: ffa7742efa445b6a0800000000000000
+      internalID: -6434160970422584577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_12
+      name: Skeleton Dead_12
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 396
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8f8d8b5077b1b990800000000000000
-      internalID: -7371909421828567154
+      spriteID: 903ecf363ce231f30800000000000000
+      internalID: 4545027865677980425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_13
+      name: Skeleton Dead_13
       rect:
         serializedVersion: 2
-        x: 1248
+        x: 429
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68b9e0c0589d473e0800000000000000
-      internalID: -2056779964345312378
+      spriteID: 2d2ce98d9027d84a0800000000000000
+      internalID: -6589485293158612270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_14
+      name: Skeleton Dead_14
       rect:
         serializedVersion: 2
-        x: 1344
+        x: 462
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c396a9ea17fedd70800000000000000
-      internalID: 9069958394531976135
+      spriteID: c7b4294bff9fac160800000000000000
+      internalID: 7046719443616025468
       vertices: []
       indices: 
       edges: []

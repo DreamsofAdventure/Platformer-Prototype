@@ -1,28 +1,31 @@
 fileFormatVersion: 2
-guid: 74b76f5ccd6a329449682a5271fdfe3f
+guid: 12ba429bdc911a64987e56833982ba8a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6324355165507055617
-    second: noBKG_KnightShield_strip_0
+      213: -273567318796562241
+    second: Skeleton Hit_0
   - first:
-      213: 5087255962602976411
-    second: noBKG_KnightShield_strip_1
+      213: 4277271011309529139
+    second: Skeleton Hit_1
   - first:
-      213: -2965027034253015942
-    second: noBKG_KnightShield_strip_2
+      213: -1537884627087384292
+    second: Skeleton Hit_2
   - first:
-      213: -8013928443498110186
-    second: noBKG_KnightShield_strip_3
+      213: 8452754394787171160
+    second: Skeleton Hit_3
   - first:
-      213: 4569066965244418331
-    second: noBKG_KnightShield_strip_4
+      213: 6079654374805429708
+    second: Skeleton Hit_4
   - first:
-      213: -3293585557555654072
-    second: noBKG_KnightShield_strip_5
+      213: 3860408454011024614
+    second: Skeleton Hit_5
   - first:
-      213: -6514837133666252962
-    second: noBKG_KnightShield_strip_6
+      213: -8501204524192146682
+    second: Skeleton Hit_6
+  - first:
+      213: -8738580348800268814
+    second: Skeleton Hit_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -86,7 +89,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -98,7 +101,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -110,7 +113,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -122,7 +125,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -134,7 +137,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -146,7 +149,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -160,148 +163,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: noBKG_KnightShield_strip_0
+      name: Skeleton Hit_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 30
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5355076, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fff8b8e1c706b38a0800000000000000
-      internalID: -6324355165507055617
+      spriteID: fb099f419f7143cf0800000000000000
+      internalID: -273567318796562241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightShield_strip_1
+      name: Skeleton Hit_1
       rect:
         serializedVersion: 2
-        x: 96
+        x: 30
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 30
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5355076, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9430743850999640800000000000000
-      internalID: 5087255962602976411
+      spriteID: 3382e25a25beb5b30800000000000000
+      internalID: 4277271011309529139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightShield_strip_2
+      name: Skeleton Hit_2
       rect:
         serializedVersion: 2
-        x: 192
+        x: 60
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 30
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5355076, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a744be92f9b1ad6d0800000000000000
-      internalID: -2965027034253015942
+      spriteID: c112ce8641658aae0800000000000000
+      internalID: -1537884627087384292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightShield_strip_3
+      name: Skeleton Hit_3
       rect:
         serializedVersion: 2
-        x: 288
+        x: 90
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 30
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5355076, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61365ed4a8ec8c090800000000000000
-      internalID: -8013928443498110186
+      spriteID: 85b49e266573e4570800000000000000
+      internalID: 8452754394787171160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightShield_strip_4
+      name: Skeleton Hit_4
       rect:
         serializedVersion: 2
-        x: 384
+        x: 120
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 30
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5355076, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b199d5a6236986f30800000000000000
-      internalID: 4569066965244418331
+      spriteID: ccd5d6741754f5450800000000000000
+      internalID: 6079654374805429708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightShield_strip_5
+      name: Skeleton Hit_5
       rect:
         serializedVersion: 2
-        x: 480
+        x: 150
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 30
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5355076, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 842d984b265da42d0800000000000000
-      internalID: -3293585557555654072
+      spriteID: 6e4fd3d190de29530800000000000000
+      internalID: 3860408454011024614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightShield_strip_6
+      name: Skeleton Hit_6
       rect:
         serializedVersion: 2
-        x: 576
+        x: 180
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 30
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5355076, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e578c4ed426a695a0800000000000000
-      internalID: -6514837133666252962
+      spriteID: 60b559cc687a50a80800000000000000
+      internalID: -8501204524192146682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Hit_7
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 30
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5355076, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f50d84c8735ab680800000000000000
+      internalID: -8738580348800268814
       vertices: []
       indices: 
       edges: []

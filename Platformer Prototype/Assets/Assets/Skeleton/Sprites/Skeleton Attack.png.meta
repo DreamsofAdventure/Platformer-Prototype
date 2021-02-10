@@ -1,52 +1,61 @@
 fileFormatVersion: 2
-guid: 311794980f9e62e43b4a646b74fce127
+guid: f29e654d911d710469d4fd9a05173ec8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2462726258303309692
-    second: noBKG_KnightDeath_strip_0
+      213: -3847943250117979209
+    second: Skeleton Attack_0
   - first:
-      213: 800447926069038329
-    second: noBKG_KnightDeath_strip_1
+      213: -529646562509220946
+    second: Skeleton Attack_1
   - first:
-      213: -946747365951844226
-    second: noBKG_KnightDeath_strip_2
+      213: -7138319701972840668
+    second: Skeleton Attack_2
   - first:
-      213: -6628401973600079656
-    second: noBKG_KnightDeath_strip_3
+      213: 3291756735606063980
+    second: Skeleton Attack_3
   - first:
-      213: 4434692913647792918
-    second: noBKG_KnightDeath_strip_4
+      213: -8264367007930756521
+    second: Skeleton Attack_4
   - first:
-      213: -2310986920892945031
-    second: noBKG_KnightDeath_strip_5
+      213: 6926094506201588144
+    second: Skeleton Attack_5
   - first:
-      213: -9019668959965462625
-    second: noBKG_KnightDeath_strip_6
+      213: 3844375112415055413
+    second: Skeleton Attack_6
   - first:
-      213: -8498603672155398073
-    second: noBKG_KnightDeath_strip_7
+      213: -6815739294338704575
+    second: Skeleton Attack_7
   - first:
-      213: 4445640418960089077
-    second: noBKG_KnightDeath_strip_8
+      213: 7627512933118868929
+    second: Skeleton Attack_8
   - first:
-      213: -467494461951899089
-    second: noBKG_KnightDeath_strip_9
+      213: -7601260514028395475
+    second: Skeleton Attack_9
   - first:
-      213: 4431850097328097444
-    second: noBKG_KnightDeath_strip_10
+      213: -823298783069048056
+    second: Skeleton Attack_10
   - first:
-      213: 4835687150137037479
-    second: noBKG_KnightDeath_strip_11
+      213: 368417881747873077
+    second: Skeleton Attack_11
   - first:
-      213: -7371909421828567154
-    second: noBKG_KnightDeath_strip_12
+      213: 1424786261180037135
+    second: Skeleton Attack_12
   - first:
-      213: -2056779964345312378
-    second: noBKG_KnightDeath_strip_13
+      213: 7777100389646448644
+    second: Skeleton Attack_13
   - first:
-      213: 9069958394531976135
-    second: noBKG_KnightDeath_strip_14
+      213: 951018012323566522
+    second: Skeleton Attack_14
+  - first:
+      213: 2023176062729479260
+    second: Skeleton Attack_15
+  - first:
+      213: -134369724413475220
+    second: Skeleton Attack_16
+  - first:
+      213: -4541977737240093436
+    second: Skeleton Attack_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -110,7 +119,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -122,7 +131,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -134,7 +143,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -146,7 +155,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -158,7 +167,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -170,7 +179,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -184,316 +193,379 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_0
+      name: Skeleton Attack_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 488edc22483a2ddd0800000000000000
-      internalID: -2462726258303309692
+      spriteID: 7b31bd4500c599ac0800000000000000
+      internalID: -3847943250117979209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_1
+      name: Skeleton Attack_1
       rect:
         serializedVersion: 2
-        x: 96
+        x: 43
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fc0b86d523cb1b00800000000000000
-      internalID: 800447926069038329
+      spriteID: ea39121f14156a8f0800000000000000
+      internalID: -529646562509220946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_2
+      name: Skeleton Attack_2
       rect:
         serializedVersion: 2
-        x: 192
+        x: 86
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e705768694a7cd2f0800000000000000
-      internalID: -946747365951844226
+      spriteID: 42f8cbe2d089fec90800000000000000
+      internalID: -7138319701972840668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_3
+      name: Skeleton Attack_3
       rect:
         serializedVersion: 2
-        x: 288
+        x: 129
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d0b117168f2304a0800000000000000
-      internalID: -6628401973600079656
+      spriteID: c638cc08f4baead20800000000000000
+      internalID: 3291756735606063980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_4
+      name: Skeleton Attack_4
       rect:
         serializedVersion: 2
-        x: 384
+        x: 172
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6133bed75b13b8d30800000000000000
-      internalID: 4434692913647792918
+      spriteID: 75254d62ef11f4d80800000000000000
+      internalID: -8264367007930756521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_5
+      name: Skeleton Attack_5
       rect:
         serializedVersion: 2
-        x: 480
+        x: 215
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97d2a9bb3a9bdefd0800000000000000
-      internalID: -2310986920892945031
+      spriteID: 0b12ee2e14e6e1060800000000000000
+      internalID: 6926094506201588144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_6
+      name: Skeleton Attack_6
       rect:
         serializedVersion: 2
-        x: 576
+        x: 258
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9f34a18ed2b3d280800000000000000
-      internalID: -9019668959965462625
+      spriteID: 53e0adedbc6f95530800000000000000
+      internalID: 3844375112415055413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_7
+      name: Skeleton Attack_7
       rect:
         serializedVersion: 2
-        x: 672
+        x: 301
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 740e85adcf4ee0a80800000000000000
-      internalID: -8498603672155398073
+      spriteID: 14b154f1931a961a0800000000000000
+      internalID: -6815739294338704575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_8
+      name: Skeleton Attack_8
       rect:
         serializedVersion: 2
-        x: 768
+        x: 344
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ff1c33386612bd30800000000000000
-      internalID: 4445640418960089077
+      spriteID: 1cd7f32b99e5ad960800000000000000
+      internalID: 7627512933118868929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_9
+      name: Skeleton Attack_9
       rect:
         serializedVersion: 2
-        x: 864
+        x: 387
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2a05e483402389f0800000000000000
-      internalID: -467494461951899089
+      spriteID: d246220f5d5e28690800000000000000
+      internalID: -7601260514028395475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_10
+      name: Skeleton Attack_10
       rect:
         serializedVersion: 2
-        x: 960
+        x: 430
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a8850dbe28118d30800000000000000
-      internalID: 4431850097328097444
+      spriteID: 803782b6e1e0394f0800000000000000
+      internalID: -823298783069048056
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_11
+      name: Skeleton Attack_11
       rect:
         serializedVersion: 2
-        x: 1056
+        x: 473
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a2d6dca7dfcb1340800000000000000
-      internalID: 4835687150137037479
+      spriteID: 53ddb7a8c12ec1500800000000000000
+      internalID: 368417881747873077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_12
+      name: Skeleton Attack_12
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 516
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8f8d8b5077b1b990800000000000000
-      internalID: -7371909421828567154
+      spriteID: f083e724e8bd5c310800000000000000
+      internalID: 1424786261180037135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_13
+      name: Skeleton Attack_13
       rect:
         serializedVersion: 2
-        x: 1248
+        x: 559
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68b9e0c0589d473e0800000000000000
-      internalID: -2056779964345312378
+      spriteID: 408bd6b799fcdeb60800000000000000
+      internalID: 7777100389646448644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightDeath_strip_14
+      name: Skeleton Attack_14
       rect:
         serializedVersion: 2
-        x: 1344
+        x: 602
         y: 0
-        width: 96
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c396a9ea17fedd70800000000000000
-      internalID: 9069958394531976135
+      spriteID: ab35b8fe7d1b23d00800000000000000
+      internalID: 951018012323566522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Attack_15
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 0
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c546019e8e3c31c10800000000000000
+      internalID: 2023176062729479260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Attack_16
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 0
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6684c3927f922ef0800000000000000
+      internalID: -134369724413475220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Attack_17
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 0
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.3, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d521aff47a7f0c0800000000000000
+      internalID: -4541977737240093436
       vertices: []
       indices: 
       edges: []
