@@ -33,12 +33,12 @@ public class SkeletonMovement : MonoBehaviour
     void FixedUpdate()
     {
         //Flip Animation & Attack Point
-        if ((skeletonTransform.position - playerTransform.position).x <= 0){
+        if ((skeletonTransform.position - playerTransform.position).x <= 0 && animator.GetBool("IsAttacking") == false){
             skeletonSR.flipX = false;
             attackPoint.localPosition = new Vector3(0.152f, 0f, 0f);
             horizontalMov = 1;
         }
-        else if ((skeletonTransform.position - playerTransform.position).x > 0){
+        else if ((skeletonTransform.position - playerTransform.position).x > 0 && animator.GetBool("IsAttacking") == false){
             skeletonSR.flipX = true;
             attackPoint.localPosition = new Vector3(-0.152f, 0f, 0f);
             horizontalMov = -1;

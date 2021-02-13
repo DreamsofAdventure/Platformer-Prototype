@@ -20,20 +20,32 @@ public class PlayerCombat : MonoBehaviour
     float comboTimer = 0f;
     float comboTimerRate = 6f;
 
+    //Jump Variable
+    int isJumping;
+
 
     void Update()
     {
-        int isJumping = animator.GetInteger("Jump");
+        isJumping = animator.GetInteger("Jump");
+
+        //Checks if player is jumping to see if the attack will go through or it will stop the combo 
+        if (isJumping != 0){
+            comboActivated = false;
+        }
+
         //Attack and combo logic
+        //Check if combo is activated so that play the animation and calculate the attack
         if (comboActivated && Time.time >= nextAttackTime){
             Attack();
             nextAttackTime = Time.time + 1f/attackRate;
         }
 
+        //For enabling the ability to combo
         if (Time.time > nextAttackTime && comboEnabled == true){
             comboEnabled = false;
         }
 
+        //Main attack logic
         if (Input.GetButtonDown("Fire1") && isJumping == 0){
             if (Time.time >= nextAttackTime && comboActivated == false && comboEnabled == false){
                 Attack();

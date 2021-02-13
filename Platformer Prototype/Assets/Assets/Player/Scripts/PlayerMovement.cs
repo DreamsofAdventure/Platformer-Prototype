@@ -102,21 +102,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 movement = new Vector2(horizontalInput * movSpeed, rb.velocity.y);
-
-        rb.velocity = movement;
+        //Horizontal Movement
+        rb.velocity = new Vector2(horizontalInput * movSpeed, rb.velocity.y);
     }
 
 
     //Player Movement Methods
     void Jump()
     {
-        Vector2 movement = new Vector2(rb.velocity.x, jumpForce);
-
-        rb.velocity = movement;
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 
         //Animation
         animator.SetInteger("Jump", 1);
+        animator.SetBool("Combo1", false);
     }
 
     public bool IsGrounded()
