@@ -79,6 +79,8 @@ public class SkeletonMovement : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
     void UnFreezeXYMovement(){
-        rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
+
+    //RigidbodyConstraints2D.FreezePositionY | 
 }

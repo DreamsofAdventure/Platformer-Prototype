@@ -141,7 +141,7 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 7928858964255100155, guid: 5e3a567da2a11a54db569ec795fdb017, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -205,7 +205,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!114 &560759870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 3692377072752156861}
   spriteRenderer: {fileID: 3692377072752156862}
-  maxHealth: 10
+  maxHealth: 6
 --- !u!114 &560759871
 MonoBehaviour:
   m_ObjectHideFlags: 0
