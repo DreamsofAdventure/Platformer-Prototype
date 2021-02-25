@@ -37,9 +37,14 @@ public class PlayerMovement : MonoBehaviour
     //Camera
     public Transform camTarget;
     public float aheadAmount, aheadSpeed;
+    private Vector3 startingCamPosition;
 
     //Attack Point
     public Transform attackPoint;
+
+    void Start(){
+        startingCamPosition = camTarget.localPosition;
+    }
 
     //Update Methods
     private void Update()
@@ -139,6 +144,17 @@ public class PlayerMovement : MonoBehaviour
         }
         else{
             rb.velocity = new Vector2(horizontalInput * movSpeed, rb.velocity.y);
+        }
+
+
+        if (rb.velocity.y > 0){
+            camTarget.localPosition = new Vector3(camTarget.localPosition.x, Mathf.Lerp(camTarget.localPosition.y, -0.1f, 1f * Time.deltaTime), camTarget.localPosition.z);
+        }
+        else if (rb.velocity.y < 0){
+            camTarget.localPosition = new Vector3(camTarget.localPosition.x, Mathf.Lerp(camTarget.localPosition.y, 0.2f, 2f * Time.deltaTime), camTarget.localPosition.z);
+        }
+        else{
+            camTarget.localPosition = new Vector3(camTarget.localPosition.x, Mathf.Lerp(camTarget.localPosition.y, startingCamPosition.y, 1f * Time.deltaTime), camTarget.localPosition.z);
         }
     }
 

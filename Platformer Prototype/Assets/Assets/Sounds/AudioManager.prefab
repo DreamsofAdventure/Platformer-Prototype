@@ -45,8 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - clipName: ForestAmbience
-    clip: {fileID: 8300000, guid: 6590b6e82dcc04540aa8a5d55fae7d1f, type: 3}
-    volume: 0.7
+    clip: {fileID: 8300000, guid: e19a6a703f1d2a341a8cd660353d296b, type: 3}
+    volume: 0.4
     pitch: 1
     loop: 1
     source: {fileID: 0}
