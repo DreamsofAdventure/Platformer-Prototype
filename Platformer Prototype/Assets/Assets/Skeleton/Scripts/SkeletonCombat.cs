@@ -44,15 +44,38 @@ public class SkeletonCombat : MonoBehaviour
 
         //Damage Enemies
         foreach(Collider2D enemy in hitEnemies){
-            //Player takes damage
-            enemy.GetComponent<PlayerStats>().TakeDamage(attackDamage);
-            //Knockback
-            if ((skeletonTransform.position - playerTransform.position).x <= 0){
-                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(5000f, 0f));
+
+            bool isEnemyRolling = enemy.GetComponent<PlayerMovement>().isRolling;
+
+            if (isEnemyRolling){
+
+            }
+            else{
+                //Player takes damage
+                enemy.GetComponent<PlayerStats>().TakeDamage(attackDamage);
+
+                //Knockback
+                if ((skeletonTransform.position - playerTransform.position).x <= 0){
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(7500f, 0f));
+                }
+                else if ((skeletonTransform.position - playerTransform.position).x > 0){
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-7500f, 0f));
+                }
+            }
+
+
+            //Vector3 knockbackDirection = playerTransform.position - skeletonTransform.position;
+
+            //Vector3 kBDirNormalized = knockbackDirection.normalized;
+
+            //enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(kBDirNormalized.x*5000f, 0f));
+
+            /* if ((skeletonTransform.position - playerTransform.position).x <= 0){
+                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(kBDirNormalized.x*5000f, kBDirNormalized.x*5000f));
             }
             else if ((skeletonTransform.position - playerTransform.position).x > 0){
-                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-5000f, 0f));
-            }
+                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(kBDirNormalized.x*-5000f, kBDirNormalized.x*5000f));
+            } */
         }
     }
 

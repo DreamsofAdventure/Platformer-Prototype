@@ -6,19 +6,53 @@ public class PlayerStats : MonoBehaviour
 {
     public Animator animator;
     public SpriteRenderer spriteRenderer;
+    public PlayerMovement playerMov;
 
     public int maxHealth = 10;
     int currentHealth;
+
+    float maxStamina;
+    float currentStamina;
+
+    //HP UI
+    public HealthBar healthBar;
+    //Stamina UI
+    public StaminaBar staminaBar;
+
+    //Camera Shake
+    public CameraShake cameraShake;
     
     void Start()
     {
-        currentHealth= maxHealth;
+        //Set HP
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+
+        //Set Stamina
+        maxStamina = playerMov.rollingCD;
+        currentStamina = maxStamina;
+        staminaBar.SetMaxStamina(maxStamina);
+    }
+
+    void Update()
+    {
+        //Updates Stamina levels
+        currentStamina = playerMov.rollingCD - playerMov.rollingCDLeft;
+        staminaBar.SetStamina(currentStamina);
     }
 
     public void TakeDamage(int damage){
         //Recieve Damage
         currentHealth -= damage;
+
+        //Set HP UI
+        healthBar.SetHealth(currentHealth);
+
+        StartCoroutine(cameraShake.Shake(.15f, .2f));
+
+        //Shine red for visual impact
         StartCoroutine(ShineWhiteCoroutine());
+
         //Recieve Hit Animation
         animator.SetTrigger("IsHit");
 
@@ -26,12 +60,14 @@ public class PlayerStats : MonoBehaviour
         if (currentHealth <= 0){
             Death();
         }
+        else{
+            FindObjectOfType<AudioManager>().Play("PlayerHit");
+        }
     }
 
     IEnumerator ShineWhiteCoroutine()
     {
         spriteRenderer.color = Color.red;
-        //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = Color.white;
     }

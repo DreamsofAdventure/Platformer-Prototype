@@ -36,7 +36,7 @@ public class PlayerCombat : MonoBehaviour
         //Attack and combo logic
         //Check if combo is activated so that play the animation and calculate the attack
         if (comboActivated && Time.time >= nextAttackTime){
-            Attack();
+            AttackAnimation();
             nextAttackTime = Time.time + 1f/attackRate;
         }
 
@@ -48,7 +48,7 @@ public class PlayerCombat : MonoBehaviour
         //Main attack logic
         if (Input.GetButtonDown("Fire1") && isJumping == 0){
             if (Time.time >= nextAttackTime && comboActivated == false && comboEnabled == false){
-                Attack();
+                AttackAnimation();
 
                 nextAttackTime = Time.time + 1f/attackRate;
                 comboTimer = Time.time + 1f/comboTimerRate;
@@ -61,7 +61,7 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void Attack(){
+    void AttackAnimation(){
         //Attack animation
         if (comboActivated == false){
             animator.SetTrigger("Attack1");
@@ -69,14 +69,21 @@ public class PlayerCombat : MonoBehaviour
         else{
             animator.SetBool("Combo1", true);
         }
+    }
 
+    void Attack(){
         //Enemy Detection
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
 
         //Damage Enemies
         foreach(Collider2D enemy in hitEnemies){
             //TODO Rework enemy script naming
-            enemy.GetComponent<SkeletonStats>().TakeDamage(attackDamage);
+            if(enemy.GetType() == typeof(CircleCollider2D)){
+                continue;
+            }
+            else{
+                enemy.GetComponent<SkeletonStats>().TakeDamage(attackDamage);
+            }
         }
     }
 

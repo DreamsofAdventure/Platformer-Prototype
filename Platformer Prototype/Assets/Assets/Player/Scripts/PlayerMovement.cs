@@ -13,6 +13,15 @@ public class PlayerMovement : MonoBehaviour
     //Moving
     public float movSpeed;
     float horizontalInput;
+    public bool isKnockedBack = false;
+    public bool isAttacking = false;
+    public bool isLookingRight;
+
+    //Rolling
+    public float rollSpeed;
+    public bool isRolling = false;
+    public float rollingCD = 4f;
+    public float rollingCDLeft = 0f;
 
     //Jumping
     public float jumpForce;
@@ -32,24 +41,36 @@ public class PlayerMovement : MonoBehaviour
     //Attack Point
     public Transform attackPoint;
 
-
     //Update Methods
     private void Update()
     {
         //Get input for movement
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
+        //Get input for rolling
+        if (Input.GetButtonDown("Fire2") && isKnockedBack == false && isAttacking == false && isRolling == false && rb.velocity.y == 0 && rollingCDLeft <= 0){
+            isRolling = true;
+            rollingCDLeft = rollingCD;
+            Roll();
+        }
+
+        if (rollingCDLeft > 0){
+            rollingCDLeft -= Time.deltaTime;
+        }
+
         //Animation
         animator.SetFloat("HorSpeed", Mathf.Abs(horizontalInput));
 
         //Flip Animation
-        if (horizontalInput > 0f){
+        if (horizontalInput > 0f && isRolling == false){
             playerSR.flipX = false;
             attackPoint.localPosition = new Vector3(0.181f, 0.067f, 0f);
+            isLookingRight = true;
         }
-        else if (horizontalInput < 0f){
+        else if (horizontalInput < 0f && isRolling == false){
             playerSR.flipX = true;
             attackPoint.localPosition = new Vector3(-0.181f, 0.067f, 0f);
+            isLookingRight = false;
         }
 
         //Jump hangtime timer
@@ -69,11 +90,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Get input for jumping
-        if ((jumpBufferCount >= 0) && (hangCounter > 0f)){
+        if ((jumpBufferCount >= 0) && (hangCounter > 0f && isKnockedBack == false && isAttacking == false && isRolling == false)){
             Jump();
             jumpBufferCount = 0;
             hangCounter = 0;
-        }
+        } //Now, we set the animation
         else if ((IsGrounded() == false) && (rb.velocity.y < 0)){
             animator.SetInteger("Jump", 2);
             animator.SetBool("Falling", true);
@@ -88,14 +109,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Jump height regulation
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0){
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0 && isKnockedBack == false){
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
 
-
         //Camera
-        if (Input.GetAxisRaw("Horizontal") != 0){
+        if (Input.GetAxisRaw("Horizontal") != 0 && isRolling == false){
             camTarget.localPosition = new Vector3(Mathf.Lerp(camTarget.localPosition.x, aheadAmount * Input.GetAxisRaw("Horizontal"), aheadSpeed * Time.deltaTime), camTarget.localPosition.y, camTarget.localPosition.z);
         }
     }
@@ -103,7 +123,23 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //Horizontal Movement
-        rb.velocity = new Vector2(horizontalInput * movSpeed, rb.velocity.y);
+        if (isKnockedBack){
+
+        }
+        else if (isRolling){
+            if (isLookingRight){
+                rb.velocity = new Vector2(rollSpeed, rb.velocity.y);
+            }
+            else{
+                rb.velocity = new Vector2(-rollSpeed, rb.velocity.y);
+            }
+        }
+        else if (isAttacking){
+            rb.velocity = new Vector2(0f, 0f);
+        }
+        else{
+            rb.velocity = new Vector2(horizontalInput * movSpeed, rb.velocity.y);
+        }
     }
 
 
@@ -117,6 +153,10 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("Combo1", false);
     }
 
+    void Roll(){
+        animator.SetBool("IsRolling", true);
+    }
+
     public bool IsGrounded()
     {
         Collider2D groundCheck = Physics2D.OverlapCircle(groundChecker.position, 0.1f, groundLayers);
@@ -127,9 +167,26 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
+
+    //Animation Events
+    void SetIsAttacking(){
+        if (isAttacking == false){
+            isAttacking = true;
+        }
+        else{
+            isAttacking = false;
+        }
+    }
+
+    void SetRollingFalse(){
+        animator.SetBool("IsRolling", false);
+        isRolling = false;
+    } 
+
     void FreezeXYMovement(){
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
+
     void UnFreezeXYMovement(){
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }

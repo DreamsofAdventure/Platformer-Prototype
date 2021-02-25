@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &760252449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 760252450}
+  - component: {fileID: 760252451}
+  m_Layer: 9
+  m_Name: FeetBoxCollider
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &760252450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760252449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1094192886837436396}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &760252451
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760252449}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.01, y: -0.04}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
 --- !u!1 &1299825292
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,11 +158,12 @@ GameObject:
   - component: {fileID: 1094192886837436396}
   - component: {fileID: 1094192886837436399}
   - component: {fileID: 1094192886837436398}
-  - component: {fileID: 1094192886837436384}
-  - component: {fileID: 1107447723}
   - component: {fileID: 1107447724}
-  - component: {fileID: 445319773}
+  - component: {fileID: 1107447723}
   - component: {fileID: 8793660083711094535}
+  - component: {fileID: 1094192886837436384}
+  - component: {fileID: 445319773}
+  - component: {fileID: 604236176}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -127,6 +185,7 @@ Transform:
   - {fileID: 1299825293}
   - {fileID: 1394084163}
   - {fileID: 1796438444}
+  - {fileID: 760252450}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -202,33 +261,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1094192886837436384
-MonoBehaviour:
+--- !u!70 &1107447724
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094192886837436387}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdac5134c1f25fb4c8283a8b9a9f33cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1094192886837436398}
-  groundChecker: {fileID: 1299825293}
-  groundLayers:
-    serializedVersion: 2
-    m_Bits: 64
-  movSpeed: 6
-  jumpForce: 18
-  hangTime: 0.1
-  jumpBufferLength: 0.1
-  animator: {fileID: 1107447723}
-  playerSR: {fileID: 1094192886837436399}
-  camTarget: {fileID: 1394084163}
-  aheadAmount: 0.2
-  aheadSpeed: 4
-  attackPoint: {fileID: 1796438444}
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.01, y: 0.03}
+  m_Size: {x: 0.16, y: 0.3}
+  m_Direction: 0
 --- !u!95 &1107447723
 Animator:
   serializedVersion: 3
@@ -248,22 +296,59 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!70 &1107447724
-CapsuleCollider2D:
+--- !u!114 &8793660083711094535
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094192886837436387}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.01, y: 0.03}
-  m_Size: {x: 0.18, y: 0.3}
-  m_Direction: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c365cf18df5e2b4b941c32fa482541d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1107447723}
+  spriteRenderer: {fileID: 1094192886837436399}
+  playerMov: {fileID: 1094192886837436384}
+  maxHealth: 10
+  healthBar: {fileID: 0}
+  staminaBar: {fileID: 0}
+  cameraShake: {fileID: 0}
+--- !u!114 &1094192886837436384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094192886837436387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdac5134c1f25fb4c8283a8b9a9f33cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1094192886837436398}
+  groundChecker: {fileID: 1299825293}
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  movSpeed: 6
+  isKnockedBack: 0
+  isAttacking: 0
+  isLookingRight: 0
+  rollSpeed: 6
+  isRolling: 0
+  rollingCD: 3
+  rollingCDLeft: 0
+  jumpForce: 18
+  hangTime: 0.1
+  jumpBufferLength: 0.1
+  animator: {fileID: 1107447723}
+  playerSR: {fileID: 1094192886837436399}
+  camTarget: {fileID: 1394084163}
+  aheadAmount: 0.2
+  aheadSpeed: 4
+  attackPoint: {fileID: 1796438444}
 --- !u!114 &445319773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +371,7 @@ MonoBehaviour:
   attackRate: 2
   comboActivated: 0
   comboEnabled: 0
---- !u!114 &8793660083711094535
+--- !u!114 &604236176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,9 +380,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1094192886837436387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c365cf18df5e2b4b941c32fa482541d, type: 3}
+  m_Script: {fileID: 11500000, guid: 30b73abe6f292814eb82a80d44957e5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1107447723}
-  spriteRenderer: {fileID: 1094192886837436399}
-  maxHealth: 10

@@ -17,7 +17,7 @@ public class PassThrough : MonoBehaviour
     {
         //TODO Change keycode for something generic for controller use
         if (Input.GetKeyDown(KeyCode.S) && isPlayerOn){
-            waitTime = 0.5f;
+            waitTime = 0.3f;
             this.gameObject.layer = 0;
         }
 

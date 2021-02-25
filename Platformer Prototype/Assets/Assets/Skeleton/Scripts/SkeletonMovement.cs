@@ -8,6 +8,7 @@ public class SkeletonMovement : MonoBehaviour
     public Transform skeletonTransform;
     public Rigidbody2D rb;
     public Transform playerTransform;
+    public RectTransform skeletonHPCanvas;
 
     //Movement
     public float movSpeed;
@@ -15,6 +16,7 @@ public class SkeletonMovement : MonoBehaviour
     public float stopFollowRange;
     public bool isFollowing = false;
     float horizontalMov = 0;
+    bool isLookingRight = true;
 
     //Animation
     public Animator animator;
@@ -32,15 +34,41 @@ public class SkeletonMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Flip Animation & Attack Point
+        //Flip Entity
+        if ((skeletonTransform.position - playerTransform.position).x <= 0 && animator.GetBool("IsAttacking") == false && isLookingRight == false){
+            //Flips gameobject's scale
+            Vector3 flipScale = skeletonTransform.localScale;
+            flipScale.x *= -1;
+            skeletonTransform.localScale = flipScale;
+
+            //Flip Canvas again so we dont flip HP bar
+            flipScale = skeletonHPCanvas.localScale;
+            flipScale.x *= -1;
+            skeletonHPCanvas.localScale = flipScale;
+
+            isLookingRight = true;
+        }
+        else if ((skeletonTransform.position - playerTransform.position).x > 0 && animator.GetBool("IsAttacking") == false && isLookingRight == true){
+            //Flips gameobject's scale
+            Vector3 flipScale = skeletonTransform.localScale;
+            flipScale.x *= -1;
+            skeletonTransform.localScale = flipScale;
+
+            //Flip Canvas again so we dont flip HP bar
+            flipScale = skeletonHPCanvas.localScale;
+            flipScale.x *= -1;
+            skeletonHPCanvas.localScale = flipScale;
+
+            isLookingRight = false;
+        }
+
+        //Move entity
         if ((skeletonTransform.position - playerTransform.position).x <= 0 && animator.GetBool("IsAttacking") == false){
-            skeletonSR.flipX = false;
-            attackPoint.localPosition = new Vector3(0.152f, 0f, 0f);
+            //Sets movement
             horizontalMov = 1;
         }
         else if ((skeletonTransform.position - playerTransform.position).x > 0 && animator.GetBool("IsAttacking") == false){
-            skeletonSR.flipX = true;
-            attackPoint.localPosition = new Vector3(-0.152f, 0f, 0f);
+            //Sets movement
             horizontalMov = -1;
         }
 
@@ -67,12 +95,16 @@ public class SkeletonMovement : MonoBehaviour
         }
     }
 
-    void OnDrawGizmosSelected(){
-        if (seeingPoint == null){
-            return;
+     //Stops player from pushing this entity around.
+    void OnTriggerEnter2D(Collider2D collider){
+        if (collider.gameObject.tag == "Player"){
+            FreezeXYMovement();
         }
-        Gizmos.DrawWireSphere(seeingPoint.position, followRange);
-        Gizmos.DrawWireSphere(seeingPoint.position, stopFollowRange);
+    }
+    void OnTriggerExit2D(Collider2D collider){
+        if (collider.gameObject.tag == "Player" && animator.GetBool("IsAttacking") == false){
+            UnFreezeXYMovement();
+        }
     }
 
     void FreezeXYMovement(){
@@ -82,5 +114,12 @@ public class SkeletonMovement : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
-    //RigidbodyConstraints2D.FreezePositionY | 
+
+    void OnDrawGizmosSelected(){
+        if (seeingPoint == null){
+            return;
+        }
+        Gizmos.DrawWireSphere(seeingPoint.position, followRange);
+        Gizmos.DrawWireSphere(seeingPoint.position, stopFollowRange);
+    }
 }
