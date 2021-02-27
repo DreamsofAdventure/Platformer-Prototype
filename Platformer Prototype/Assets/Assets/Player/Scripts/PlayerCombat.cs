@@ -82,7 +82,8 @@ public class PlayerCombat : MonoBehaviour
                 continue;
             }
             else{
-                enemy.GetComponent<SkeletonStats>().TakeDamage(attackDamage);
+                GameObject enemyGameObject = enemy.gameObject;
+                enemyGameObject.SendMessage("TakeDamage", attackDamage);
             }
         }
     }

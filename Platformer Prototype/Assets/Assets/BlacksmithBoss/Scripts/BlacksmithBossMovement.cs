@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkeletonMovement : MonoBehaviour
+public class BlacksmithBossMovement : MonoBehaviour
 {
     //General Variables
-    public Transform skeletonTransform;
+    public Transform blacksmithTransform;
     public Rigidbody2D rb;
     public Transform playerTransform;
-    public RectTransform skeletonHPCanvas;
+    public RectTransform blacksmithHPCanvas;
 
     //Movement
     public float movSpeed;
@@ -33,47 +33,47 @@ public class SkeletonMovement : MonoBehaviour
     void FixedUpdate()
     {
         //Flip Entity
-        if ((skeletonTransform.position - playerTransform.position).x <= 0 && animator.GetBool("IsAttacking") == false && isLookingRight == false){
+        if ((blacksmithTransform.position - playerTransform.position).x <= 0 && animator.GetBool("IsAttacking") == false && isLookingRight == false){
             //Flips gameobject's scale
-            Vector3 flipScale = skeletonTransform.localScale;
+            Vector3 flipScale = blacksmithTransform.localScale;
             flipScale.x *= -1;
-            skeletonTransform.localScale = flipScale;
+            blacksmithTransform.localScale = flipScale;
 
             //Flip Canvas again so we dont flip HP bar
-            flipScale = skeletonHPCanvas.localScale;
+            flipScale = blacksmithHPCanvas.localScale;
             flipScale.x *= -1;
-            skeletonHPCanvas.localScale = flipScale;
+            blacksmithHPCanvas.localScale = flipScale;
 
             isLookingRight = true;
         }
-        else if ((skeletonTransform.position - playerTransform.position).x > 0 && animator.GetBool("IsAttacking") == false && isLookingRight == true){
+        else if ((blacksmithTransform.position - playerTransform.position).x > 0 && animator.GetBool("IsAttacking") == false && isLookingRight == true){
             //Flips gameobject's scale
-            Vector3 flipScale = skeletonTransform.localScale;
+            Vector3 flipScale = blacksmithTransform.localScale;
             flipScale.x *= -1;
-            skeletonTransform.localScale = flipScale;
+            blacksmithTransform.localScale = flipScale;
 
             //Flip Canvas again so we dont flip HP bar
-            flipScale = skeletonHPCanvas.localScale;
+            flipScale = blacksmithHPCanvas.localScale;
             flipScale.x *= -1;
-            skeletonHPCanvas.localScale = flipScale;
+            blacksmithHPCanvas.localScale = flipScale;
 
             isLookingRight = false;
         }
 
         //Move entity
-        if ((skeletonTransform.position - playerTransform.position).x <= 0 && animator.GetBool("IsAttacking") == false){
+        if ((blacksmithTransform.position - playerTransform.position).x <= 0 && animator.GetBool("IsAttacking") == false){
             //Sets movement
             horizontalMov = 1;
         }
-        else if ((skeletonTransform.position - playerTransform.position).x > 0 && animator.GetBool("IsAttacking") == false){
+        else if ((blacksmithTransform.position - playerTransform.position).x > 0 && animator.GetBool("IsAttacking") == false){
             //Sets movement
             horizontalMov = -1;
         }
 
         //Follow Player
-        if (Vector2.Distance(skeletonTransform.position, playerTransform.position) >= followRange && Vector2.Distance(skeletonTransform.position, playerTransform.position) < stopFollowRange){
+        if (Vector2.Distance(blacksmithTransform.position, playerTransform.position) >= followRange && Vector2.Distance(blacksmithTransform.position, playerTransform.position) < stopFollowRange){
             isFollowing = true;
-            //skeletonTransform.position = Vector2.MoveTowards(skeletonTransform.position, playerTransform.position, movSpeed * Time.deltaTime);
+            //blacksmithTransform.position = Vector2.MoveTowards(blacksmithTransform.position, playerTransform.position, movSpeed * Time.deltaTime);
 
             Vector2 movement = new Vector2(horizontalMov * movSpeed, rb.velocity.y);
 

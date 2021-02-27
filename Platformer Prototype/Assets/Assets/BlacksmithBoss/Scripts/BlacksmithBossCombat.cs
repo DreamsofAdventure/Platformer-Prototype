@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkeletonCombat : MonoBehaviour
+public class BlacksmithBossCombat : MonoBehaviour
 {
     //General Variables
     public Animator animator;
     public Transform attackPoint;
     public LayerMask playerLayer;
-    public Transform skeletonTransform;
+    public Transform blacksmithTransform;
     public Transform playerTransform;
 
     //Attack Variables
@@ -29,7 +29,7 @@ public class SkeletonCombat : MonoBehaviour
     {
 
         //Attack Logic
-        if (Vector2.Distance(skeletonTransform.position, playerTransform.position) <= attackRange){
+        if (Vector2.Distance(blacksmithTransform.position, playerTransform.position) <= attackRange){
             if (Time.time >= nextAttackTime){
                 //Attack animation
                 animator.SetTrigger("Attack");
@@ -55,11 +55,11 @@ public class SkeletonCombat : MonoBehaviour
                 enemy.GetComponent<PlayerStats>().TakeDamage(attackDamage);
 
                 //Knockback
-                if ((skeletonTransform.position - playerTransform.position).x <= 0){
-                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(7500f, 0f));
+                if ((blacksmithTransform.position - playerTransform.position).x <= 0){
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(5000f, 0f));
                 }
-                else if ((skeletonTransform.position - playerTransform.position).x > 0){
-                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-7500f, 0f));
+                else if ((blacksmithTransform.position - playerTransform.position).x > 0){
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-5000f, 0f));
                 }
             }
         }

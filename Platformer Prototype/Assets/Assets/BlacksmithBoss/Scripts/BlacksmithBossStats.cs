@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkeletonStats : MonoBehaviour
+public class BlacksmithBossStats : MonoBehaviour
 {
     public Animator animator;
     public SpriteRenderer spriteRenderer;
 
-    public int maxHealth = 5;
+    public int maxHealth;
     int currentHealth;
 
     //HP UI
@@ -64,8 +64,8 @@ public class SkeletonStats : MonoBehaviour
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         GetComponent<IgnoreCollisionsRoll>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
-        GetComponent<SkeletonMovement>().enabled = false;
-        GetComponent<SkeletonCombat>().enabled = false;
+        GetComponent<BlacksmithBossMovement>().enabled = false;
+        GetComponent<BlacksmithBossCombat>().enabled = false;
         Destroy(feetBoxColl);
         //Flashes entity's sprite red to indicate damage
         StartCoroutine(DissapearCoroutine());

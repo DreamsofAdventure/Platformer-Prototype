@@ -529,9 +529,7 @@ MonoBehaviour:
   stopFollowRange: 7
   isFollowing: 0
   animator: {fileID: 3692377072752156861}
-  skeletonSR: {fileID: 3692377072752156862}
   seeingPoint: {fileID: 1479346159}
-  attackPoint: {fileID: 1922341110}
 --- !u!114 &560759866
 MonoBehaviour:
   m_ObjectHideFlags: 0
