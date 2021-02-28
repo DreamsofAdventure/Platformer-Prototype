@@ -197,7 +197,7 @@ public class PlayerMovement : MonoBehaviour
     void SetRollingFalse(){
         animator.SetBool("IsRolling", false);
         isRolling = false;
-    } 
+    }
 
     void FreezeXYMovement(){
         rb.constraints = RigidbodyConstraints2D.FreezeAll;

@@ -84,6 +84,6 @@ public class SkeletonCombat : MonoBehaviour
             return;
         }
         Gizmos.DrawWireSphere(attackPoint.position, attackPointRange);
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(this.gameObject.transform.position, attackRange);
     }
 }

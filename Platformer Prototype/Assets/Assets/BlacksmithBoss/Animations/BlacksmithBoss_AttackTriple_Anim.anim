@@ -168,21 +168,21 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.41666666
-    functionName: Attack
+    functionName: AttackTriple1
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.1666666
-    functionName: Attack
+    functionName: AttackTriple2
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.9166666
-    functionName: Attack
+    functionName: AttackTriple3
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

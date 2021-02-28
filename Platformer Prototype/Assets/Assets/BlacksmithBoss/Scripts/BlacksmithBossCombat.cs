@@ -14,9 +14,19 @@ public class BlacksmithBossCombat : MonoBehaviour
     //Attack Variables
     public float attackRange = 1.85f;
     public float attackPointRange = 1.5f;
-    public int attackDamage = 1;
-    public float attackCooldown = 2.5f;
-    float nextAttackTime = 0f;
+    //Triple Attack
+    public float attackTripleCD = 3f;
+    float nextAttackTripleTime = 0f;
+    //Spin Attack
+    public float attackSpinCD = 10f;
+    float nextAttackSpinTime = 0f;
+
+    //Attack Points
+    public Transform attackPointTriple11;
+    public Transform attackPointTriple12;
+    public Transform attackPointTriple2;
+    public Transform attackPointTriple3;
+    public Transform attackPointSpin;
 
 
     void Start()
@@ -27,20 +37,29 @@ public class BlacksmithBossCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //Attack Logic
-        if (Vector2.Distance(blacksmithTransform.position, playerTransform.position) <= attackRange){
-            if (Time.time >= nextAttackTime){
+        if (Vector2.Distance(blacksmithTransform.position, playerTransform.position) <= attackRange && animator.GetBool("IsAttacking") == false){
+            if (Time.time >= nextAttackSpinTime){
                 //Attack animation
-                animator.SetTrigger("Attack");
-                nextAttackTime = Time.time + attackCooldown;
+                animator.SetTrigger("AttackSpin");
+                nextAttackSpinTime = Time.time + attackSpinCD;
+            }
+            else if (Time.time >= nextAttackTripleTime){
+                //Attack animation
+                animator.SetTrigger("AttackTriple");
+                nextAttackTripleTime = Time.time + attackTripleCD;
             }
         }
     }
 
-    void Attack(){
+
+
+
+    //All attack functions!
+    //Triple Attack
+    void AttackTriple1(){
         //Enemy Detection
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackPointRange, playerLayer);
+        Collider2D[] hitEnemies = Physics2D.OverlapAreaAll(attackPointTriple11.position, attackPointTriple12.position, playerLayer);
 
         //Damage Enemies
         foreach(Collider2D enemy in hitEnemies){
@@ -52,14 +71,94 @@ public class BlacksmithBossCombat : MonoBehaviour
             }
             else{
                 //Player takes damage
-                enemy.GetComponent<PlayerStats>().TakeDamage(attackDamage);
+                enemy.GetComponent<PlayerStats>().TakeDamage(1);
 
                 //Knockback
                 if ((blacksmithTransform.position - playerTransform.position).x <= 0){
-                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(5000f, 0f));
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(2500f, 0f));
                 }
                 else if ((blacksmithTransform.position - playerTransform.position).x > 0){
-                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-5000f, 0f));
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-2500f, 0f));
+                }
+            }
+        }
+    }
+    void AttackTriple2(){
+        //Enemy Detection
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPointTriple2.position, 2.37f, playerLayer);
+
+        //Damage Enemies
+        foreach(Collider2D enemy in hitEnemies){
+
+            bool isEnemyRolling = enemy.GetComponent<PlayerMovement>().isRolling;
+
+            if (isEnemyRolling){
+
+            }
+            else{
+                //Player takes damage
+                enemy.GetComponent<PlayerStats>().TakeDamage(2);
+
+                //Knockback
+                if ((blacksmithTransform.position - playerTransform.position).x <= 0){
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(2500f, 0f));
+                }
+                else if ((blacksmithTransform.position - playerTransform.position).x > 0){
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-2500f, 0f));
+                }
+            }
+        }
+    }
+    void AttackTriple3(){
+        //Enemy Detection
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPointTriple3.position, 2.8f, playerLayer);
+
+        //Damage Enemies
+        foreach(Collider2D enemy in hitEnemies){
+
+            bool isEnemyRolling = enemy.GetComponent<PlayerMovement>().isRolling;
+
+            if (isEnemyRolling){
+
+            }
+            else{
+                //Player takes damage
+                enemy.GetComponent<PlayerStats>().TakeDamage(2);
+
+                //Knockback
+                if ((blacksmithTransform.position - playerTransform.position).x <= 0){
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(2500f, 0f));
+                }
+                else if ((blacksmithTransform.position - playerTransform.position).x > 0){
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-2500f, 0f));
+                }
+            }
+        }
+    }
+    
+    //Spin Attack
+    void AttackSpin(){
+        //Enemy Detection
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPointSpin.position, 3f, playerLayer);
+
+        //Damage Enemies
+        foreach(Collider2D enemy in hitEnemies){
+
+            bool isEnemyRolling = enemy.GetComponent<PlayerMovement>().isRolling;
+
+            if (isEnemyRolling){
+
+            }
+            else{
+                //Player takes damage
+                enemy.GetComponent<PlayerStats>().TakeDamage(1);
+
+                //Knockback
+                if ((blacksmithTransform.position - playerTransform.position).x <= 0){
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(1500f, 0f));
+                }
+                else if ((blacksmithTransform.position - playerTransform.position).x > 0){
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-1500f, 0f));
                 }
             }
         }
@@ -73,6 +172,12 @@ public class BlacksmithBossCombat : MonoBehaviour
     void SetIsAttackingFalse(){
         animator.SetBool("IsAttacking", false);
     }
+    void SetIsSpinningTrue(){
+        animator.SetBool("IsSpinning", true);
+    }
+    void SetIsSpinningFalse(){
+        animator.SetBool("IsSpinning", false);
+    }
     //Resets IsHit trigger. This is to use when it starts attacking so that it doesnt save IsHit trigger for after attacking
     void ResetIsHit(){
         animator.ResetTrigger("IsHit");
@@ -83,7 +188,11 @@ public class BlacksmithBossCombat : MonoBehaviour
         if (attackPoint == null){
             return;
         }
-        Gizmos.DrawWireSphere(attackPoint.position, attackPointRange);
+        //Gizmos.DrawWireCube(attackPointTriple11.position, boxVector);
+        Gizmos.DrawWireSphere(attackPointSpin.position, attackPointRange);
+
+
+
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

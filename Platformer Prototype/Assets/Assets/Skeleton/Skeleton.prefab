@@ -154,7 +154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922341109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.074, y: 0, z: 0}
+  m_LocalPosition: {x: 0.1268, y: 0.0044, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3692377072752156863}
@@ -549,8 +549,8 @@ MonoBehaviour:
     m_Bits: 256
   skeletonTransform: {fileID: 3692377072752156863}
   playerTransform: {fileID: 0}
-  attackRange: 2
-  attackPointRange: 1.5
+  attackRange: 1.9
+  attackPointRange: 1.3
   attackDamage: 1
   attackCooldown: 3
 --- !u!114 &785715050

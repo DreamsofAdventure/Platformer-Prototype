@@ -61,11 +61,11 @@ public class BlacksmithBossMovement : MonoBehaviour
         }
 
         //Move entity
-        if ((blacksmithTransform.position - playerTransform.position).x <= 0 && animator.GetBool("IsAttacking") == false){
+        if ((blacksmithTransform.position - playerTransform.position).x <= 0 && animator.GetBool("IsSpinning") == false){
             //Sets movement
             horizontalMov = 1;
         }
-        else if ((blacksmithTransform.position - playerTransform.position).x > 0 && animator.GetBool("IsAttacking") == false){
+        else if ((blacksmithTransform.position - playerTransform.position).x > 0 && animator.GetBool("IsSpinning") == false){
             //Sets movement
             horizontalMov = -1;
         }
@@ -73,15 +73,28 @@ public class BlacksmithBossMovement : MonoBehaviour
         //Follow Player
         if (Vector2.Distance(blacksmithTransform.position, playerTransform.position) >= followRange && Vector2.Distance(blacksmithTransform.position, playerTransform.position) < stopFollowRange){
             isFollowing = true;
-            //blacksmithTransform.position = Vector2.MoveTowards(blacksmithTransform.position, playerTransform.position, movSpeed * Time.deltaTime);
+            Vector2 movement;
 
-            Vector2 movement = new Vector2(horizontalMov * movSpeed, rb.velocity.y);
-
-            rb.velocity = movement;
+            //Adds movement when using spin attack
+            if (animator.GetBool("IsSpinning") == true && animator.GetBool("IsAttacking") == true){
+                movement = new Vector2(horizontalMov * movSpeed*2, rb.velocity.y);
+                rb.velocity = movement;
+            }
+            else if (animator.GetBool("IsAttacking") == false){
+                movement = new Vector2(horizontalMov * movSpeed, rb.velocity.y);
+                rb.velocity = movement;
+            }
         }
         else{
-            isFollowing = false;
-            rb.velocity = new Vector2(0f, 0f);
+            //Adds exception from stopping when it is using the spin attack
+            if (animator.GetBool("IsSpinning") == true && animator.GetBool("IsAttacking") == true){
+                Vector2 movement = new Vector2(horizontalMov * movSpeed*2, rb.velocity.y);
+                rb.velocity = movement;
+            }
+            else{
+                rb.velocity = new Vector2(0f, 0f);
+                isFollowing = false;
+            }
         }
 
         //Moving Animation
@@ -95,12 +108,12 @@ public class BlacksmithBossMovement : MonoBehaviour
 
      //Stops player from pushing this entity around.
     void OnTriggerEnter2D(Collider2D collider){
-        if (collider.gameObject.tag == "Player"){
+        if (collider.gameObject.tag == "Player" && animator.GetBool("IsSpinning") == false){
             FreezeXYMovement();
         }
     }
     void OnTriggerStay2D(Collider2D collider){
-        if (collider.gameObject.tag == "Player"){
+        if (collider.gameObject.tag == "Player" && animator.GetBool("IsSpinning") == false){
             FreezeXYMovement();
         }
     }

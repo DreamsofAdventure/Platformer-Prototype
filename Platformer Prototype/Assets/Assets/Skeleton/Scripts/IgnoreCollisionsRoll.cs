@@ -19,7 +19,6 @@ public class IgnoreCollisionsRoll : MonoBehaviour
         playerMov = playerGO.GetComponent<PlayerMovement>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (playerMov.isRolling == true){
