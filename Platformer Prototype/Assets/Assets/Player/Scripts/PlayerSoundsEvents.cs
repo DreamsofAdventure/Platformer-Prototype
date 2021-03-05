@@ -14,12 +14,28 @@ public class PlayerSoundsEvents : MonoBehaviour
 
     //This one isnt used. It is activated from script when damage taken
     //TODO Fix later
+    void SoundJump(){
+        FindObjectOfType<AudioManager>().Play("PlayerJump");
+    }
+
+    void SoundRoll(){
+        FindObjectOfType<AudioManager>().Play("PlayerRoll");
+    }
+
     void SoundHit(){
         FindObjectOfType<AudioManager>().Play("PlayerHit");
     }
 
     void SoundDeath(){
         FindObjectOfType<AudioManager>().Play("PlayerDeath");
+    }
+
+    void SoundWoosh1(){
+        FindObjectOfType<AudioManager>().Play("PlayerWoosh1");
+    }
+
+    void SoundWoosh2(){
+        FindObjectOfType<AudioManager>().Play("PlayerWoosh2");
     }
 
     void SoundAttack1(){

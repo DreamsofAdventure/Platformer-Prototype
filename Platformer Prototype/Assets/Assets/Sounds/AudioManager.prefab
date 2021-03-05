@@ -45,10 +45,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - clipName: ForestAmbience
-    clip: {fileID: 8300000, guid: e19a6a703f1d2a341a8cd660353d296b, type: 3}
-    volume: 0.4
+    clip: {fileID: 8300000, guid: 6590b6e82dcc04540aa8a5d55fae7d1f, type: 3}
+    volume: 0.7
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - clipName: BossArenaAmbience
+    clip: {fileID: 8300000, guid: 95bfd4fc8fa16004897ba35a9d8d717c, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
   - clipName: PlayerFootStep1
     clip: {fileID: 8300000, guid: fc61dfa34483f5840af220d5aa4c5bcb, type: 3}
@@ -62,8 +68,20 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - clipName: PlayerJump
+    clip: {fileID: 8300000, guid: 08054161ee955614596c9b16b479c7f3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - clipName: PlayerRoll
+    clip: {fileID: 8300000, guid: d486cddd96a224c4d9833939c86f188a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   - clipName: PlayerHit
-    clip: {fileID: 8300000, guid: cd1c05a08c7bb824e8602feb62949344, type: 3}
+    clip: {fileID: 8300000, guid: c0aa99b9a32548d4dbbfd9d94639cb20, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -74,21 +92,33 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - clipName: PlayerAttack1
+  - clipName: PlayerWoosh1
     clip: {fileID: 8300000, guid: c5ffb8aec3ef9604aab532b6c846ff40, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - clipName: PlayerAttack2
+  - clipName: PlayerWoosh2
     clip: {fileID: 8300000, guid: 3d22c8d9890be4c409dadc444262b7cc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - clipName: PlayerAttack1
+    clip: {fileID: 8300000, guid: 17d7ec35eae9e8a429fa329351db95cb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - clipName: PlayerAttack2
+    clip: {fileID: 8300000, guid: bc2912a2139732a45b0ef61d4b7c2216, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - clipName: SkeletonAttack
     clip: {fileID: 8300000, guid: 8502e06c79fe046499926ea016099f2b, type: 3}
-    volume: 1
+    volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -100,13 +130,97 @@ MonoBehaviour:
     source: {fileID: 0}
   - clipName: SkeletonHit
     clip: {fileID: 8300000, guid: 3985d4fbeb0bcef4197e4cddee0f7e37, type: 3}
-    volume: 1
+    volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - clipName: SkeletonDeath
     clip: {fileID: 8300000, guid: aeb91d0de7a33334f950f5462518ff71, type: 3}
-    volume: 1
+    volume: 0.7
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - clipName: BlacksmithBossFS1
+    clip: {fileID: 8300000, guid: ec2f7ff0702915c48b3838569cdf4b7b, type: 3}
+    volume: 1
+    pitch: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - clipName: BlacksmithBossFS2
+    clip: {fileID: 8300000, guid: 35cd80ab1fb01134caa6c23945d904a2, type: 3}
+    volume: 1
+    pitch: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - clipName: BlacksmithBossJump
+    clip: {fileID: 8300000, guid: d7a6077a9f314384bae9f58f2a90cf55, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - clipName: BlacksmithBossDeath
+    clip: {fileID: 8300000, guid: 1b06814d81564824ca56d2a7e99cca6f, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - clipName: BlacksmithBossHit
+    clip: {fileID: 8300000, guid: 12d833603ace6cd42a3e4bd24904f108, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - clipName: BlacksmithBossAttack1
+    clip: {fileID: 8300000, guid: 7e6f1ed4ab73ed74bbb8d97159e8b6ca, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - clipName: BlacksmithBossAttack2
+    clip: {fileID: 8300000, guid: f859951010190ce479348391de4b8209, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - clipName: BlacksmithBossAttack3
+    clip: {fileID: 8300000, guid: a37296e735c4a90408cf4074611e15de, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - clipName: BlacksmithBossAttack4
+    clip: {fileID: 8300000, guid: 611462ad807749a4a8724d50854af05b, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - clipName: BlacksmithBossAttack5
+    clip: {fileID: 8300000, guid: c62e6b8181cc9e246ab38e56c2fa4b30, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - clipName: BlacksmithBossAttack6
+    clip: {fileID: 8300000, guid: 386e8ad4a8868c64f8627aeee94ab2dc, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - clipName: BlacksmithBossWoosh1
+    clip: {fileID: 8300000, guid: dd1fd9f96b29a3e49bdd9dba5649a6fb, type: 3}
+    volume: 1
+    pitch: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - clipName: BlacksmithBossWoosh2
+    clip: {fileID: 8300000, guid: c5ffb8aec3ef9604aab532b6c846ff40, type: 3}
+    volume: 1
+    pitch: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - clipName: BlacksmithBossWoosh3
+    clip: {fileID: 8300000, guid: 3d22c8d9890be4c409dadc444262b7cc, type: 3}
+    volume: 1
+    pitch: 0.6
     loop: 0
     source: {fileID: 0}

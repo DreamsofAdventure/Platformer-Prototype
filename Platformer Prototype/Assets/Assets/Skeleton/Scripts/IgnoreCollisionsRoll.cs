@@ -13,6 +13,8 @@ public class IgnoreCollisionsRoll : MonoBehaviour
     public Collider2D thisBaseColl;
     public Collider2D thisFeetColl;
 
+    bool isJumping = false;
+
 
     void Start()
     {
@@ -21,7 +23,7 @@ public class IgnoreCollisionsRoll : MonoBehaviour
 
     void Update()
     {
-        if (playerMov.isRolling == true){
+        if (playerMov.isRolling == true || isJumping){
             Physics2D.IgnoreCollision(playerBaseColl, thisBaseColl);
             Physics2D.IgnoreCollision(playerBaseColl, thisFeetColl);
             Physics2D.IgnoreCollision(playerFeetColl, thisBaseColl);
@@ -33,5 +35,14 @@ public class IgnoreCollisionsRoll : MonoBehaviour
             Physics2D.IgnoreCollision(playerFeetColl, thisBaseColl, false);
             Physics2D.IgnoreCollision(playerFeetColl, thisFeetColl, false);
         }
+    }
+
+
+    //To be used in animation
+    void IgnoreCollisionFeetTrue(){
+        isJumping = true;
+    }
+    void IgnoreCollisionFeetFalse(){
+        isJumping = false;
     }
 }

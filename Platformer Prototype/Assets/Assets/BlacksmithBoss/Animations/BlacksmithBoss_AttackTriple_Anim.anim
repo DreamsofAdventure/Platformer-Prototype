@@ -161,6 +161,13 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0
+    functionName: SoundAttack3
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
     functionName: SetIsAttackingTrue
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -174,8 +181,36 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.41666666
+    functionName: SoundWhoosh3
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6666667
+    functionName: SoundAttack4
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.1666666
+    functionName: SoundWhoosh1
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 1.1666666
     functionName: AttackTriple2
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.5
+    functionName: SoundAttack3
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -188,15 +223,22 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.5
-    functionName: UnFreezeXYMovement
+  - time: 1.9166666
+    functionName: SoundWhoosh2
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.4166667
+    functionName: SetIsAttackingFalse
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 2.5
-    functionName: SetIsAttackingFalse
+    functionName: UnFreezeXYMovement
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

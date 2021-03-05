@@ -96,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Get input for jumping
         if ((jumpBufferCount >= 0) && (hangCounter > 0f && isKnockedBack == false && isAttacking == false && isRolling == false)){
+            FindObjectOfType<AudioManager>().Play("PlayerJump");
             Jump();
             jumpBufferCount = 0;
             hangCounter = 0;

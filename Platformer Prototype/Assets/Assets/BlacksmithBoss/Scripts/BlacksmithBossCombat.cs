@@ -20,6 +20,12 @@ public class BlacksmithBossCombat : MonoBehaviour
     //Spin Attack
     public float attackSpinCD = 10f;
     float nextAttackSpinTime = 0f;
+    //Leap Attack
+    public float attackLeapCD = 10f;
+    float nextAttackLeapTime = 0f;
+    float leapAttackRangeMin = 8.5f;
+    float leapAttackRangeMax = 14.5f;
+    public Transform leapAttackNewPos; 
 
     //Attack Points
     public Transform attackPointTriple11;
@@ -27,6 +33,12 @@ public class BlacksmithBossCombat : MonoBehaviour
     public Transform attackPointTriple2;
     public Transform attackPointTriple3;
     public Transform attackPointSpin;
+    public Transform attackPointLeap;
+
+    //Colliders
+    public Collider2D baseCollider;
+    public Collider2D tempCollider1;
+    public Collider2D tempCollider2;
 
 
     void Start()
@@ -38,7 +50,14 @@ public class BlacksmithBossCombat : MonoBehaviour
     void Update()
     {
         //Attack Logic
-        if (Vector2.Distance(blacksmithTransform.position, playerTransform.position) <= attackRange && animator.GetBool("IsAttacking") == false){
+        if (Vector2.Distance(blacksmithTransform.position, playerTransform.position) <= leapAttackRangeMax && Vector2.Distance(blacksmithTransform.position, playerTransform.position) > leapAttackRangeMin && animator.GetBool("IsAttacking") == false){
+            if (Time.time >= nextAttackLeapTime){
+                //Attack animation
+                animator.SetTrigger("AttackLeap");
+                nextAttackLeapTime = Time.time + attackLeapCD;
+            }
+        }
+        else if (Vector2.Distance(blacksmithTransform.position, playerTransform.position) <= attackRange && animator.GetBool("IsAttacking") == false){
             if (Time.time >= nextAttackSpinTime){
                 //Attack animation
                 animator.SetTrigger("AttackSpin");
@@ -164,6 +183,33 @@ public class BlacksmithBossCombat : MonoBehaviour
         }
     }
 
+    //Leap Attack
+    void AttackLeap(){
+        //Enemy Detection
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPointLeap.position, 3.5f, playerLayer);
+
+        //Damage Enemies
+        foreach(Collider2D enemy in hitEnemies){
+
+            bool isEnemyRolling = enemy.GetComponent<PlayerMovement>().isRolling;
+
+            if (isEnemyRolling){
+
+            }
+            else{
+                //Player takes damage
+                enemy.GetComponent<PlayerStats>().TakeDamage(2);
+
+                //Knockback
+                if ((attackPointLeap.position - playerTransform.position).x <= 0){
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(7500f, 0f));
+                }
+                else if ((attackPointLeap.position - playerTransform.position).x > 0){
+                    enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(-7500f, 0f));
+                }
+            }
+        }
+    }
 
     //Animation Events
     void SetIsAttackingTrue(){
@@ -182,6 +228,27 @@ public class BlacksmithBossCombat : MonoBehaviour
     void ResetIsHit(){
         animator.ResetTrigger("IsHit");
     }
+    void SetNewPositionLeap(){
+        this.gameObject.transform.position = leapAttackNewPos.position;
+    }
+    void SetBaseColliderTrue(){
+        baseCollider.enabled = true;
+    }
+    void SetBaseColliderFalse(){
+        baseCollider.enabled = false;
+    }
+    void SetTempCollider1True(){
+        tempCollider1.enabled = true;
+    }
+    void SetTempCollider1False(){
+        tempCollider1.enabled = false;
+    }
+    void SetTempCollider2True(){
+        tempCollider2.enabled = true;
+    }
+    void SetTempCollider2False(){
+        tempCollider2.enabled = false;
+    }
 
 
     void OnDrawGizmosSelected(){
@@ -189,10 +256,12 @@ public class BlacksmithBossCombat : MonoBehaviour
             return;
         }
         //Gizmos.DrawWireCube(attackPointTriple11.position, boxVector);
-        Gizmos.DrawWireSphere(attackPointSpin.position, attackPointRange);
+        Gizmos.DrawWireSphere(attackPointLeap.position, attackPointRange);
 
 
 
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        //Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        //Gizmos.DrawWireSphere(attackPoint.position, leapAttackRangeMin);
+        //Gizmos.DrawWireSphere(attackPoint.position, leapAttackRangeMax);
     }
 }

@@ -16,6 +16,9 @@ public class BlacksmithBossStats : MonoBehaviour
 
     //FeetBoxCollider
     public GameObject feetBoxColl;
+
+    //Audio
+    public BlacksmithBossSoundEvents soundEvents;
     
     void Start()
     {
@@ -35,6 +38,8 @@ public class BlacksmithBossStats : MonoBehaviour
 
         //Set HP UI
         healthBar.SetHealth(currentHealth);
+
+        soundEvents.SoundHit();
 
         //Enables Canvas
         canvasHP.enabled = true;

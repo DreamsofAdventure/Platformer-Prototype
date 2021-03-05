@@ -83,7 +83,7 @@ public class PlayerCombat : MonoBehaviour
             }
             else{
                 GameObject enemyGameObject = enemy.gameObject;
-                enemyGameObject.SendMessage("TakeDamage", attackDamage);
+                enemyGameObject.SendMessageUpwards("TakeDamage", attackDamage);
             }
         }
     }
