@@ -12,7 +12,7 @@ public class BlacksmithBossStats : MonoBehaviour
 
     //HP UI
     public HealthBar healthBar;
-    public Canvas canvasHP;
+    //public Canvas canvasHP;
 
     //FeetBoxCollider
     public GameObject feetBoxColl;
@@ -29,7 +29,7 @@ public class BlacksmithBossStats : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         //Hides the HP canvas
-        canvasHP.enabled = false;
+        //canvasHP.enabled = false;
     }
 
     public void TakeDamage(int damage){
@@ -42,7 +42,7 @@ public class BlacksmithBossStats : MonoBehaviour
         soundEvents.SoundHit();
 
         //Enables Canvas
-        canvasHP.enabled = true;
+        //canvasHP.enabled = true;
 
         //Recieve Hit Animation
         if (animator.GetBool("IsAttacking") == false){
@@ -87,8 +87,8 @@ public class BlacksmithBossStats : MonoBehaviour
     IEnumerator DissapearCoroutine()
     {
         yield return new WaitForSeconds(1f);
-        canvasHP.enabled = false;
-        yield return new WaitForSeconds(4.0f);
+        //canvasHP.enabled = false;
+        yield return new WaitForSeconds(60.0f);
         Destroy(gameObject);
     }
 }

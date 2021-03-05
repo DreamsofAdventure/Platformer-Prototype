@@ -8,7 +8,7 @@ public class BlacksmithBossMovement : MonoBehaviour
     public Transform blacksmithTransform;
     public Rigidbody2D rb;
     public Transform playerTransform;
-    public RectTransform blacksmithHPCanvas;
+    //public RectTransform blacksmithHPCanvas;
 
     //Movement
     public float movSpeed;
@@ -40,9 +40,9 @@ public class BlacksmithBossMovement : MonoBehaviour
             blacksmithTransform.localScale = flipScale;
 
             //Flip Canvas again so we dont flip HP bar
-            flipScale = blacksmithHPCanvas.localScale;
-            flipScale.x *= -1;
-            blacksmithHPCanvas.localScale = flipScale;
+            //flipScale = blacksmithHPCanvas.localScale;
+            //flipScale.x *= -1;
+            //blacksmithHPCanvas.localScale = flipScale;
 
             isLookingRight = true;
         }
@@ -53,9 +53,9 @@ public class BlacksmithBossMovement : MonoBehaviour
             blacksmithTransform.localScale = flipScale;
 
             //Flip Canvas again so we dont flip HP bar
-            flipScale = blacksmithHPCanvas.localScale;
-            flipScale.x *= -1;
-            blacksmithHPCanvas.localScale = flipScale;
+            //flipScale = blacksmithHPCanvas.localScale;
+            //flipScale.x *= -1;
+            //blacksmithHPCanvas.localScale = flipScale;
 
             isLookingRight = false;
         }

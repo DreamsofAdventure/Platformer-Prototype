@@ -54,7 +54,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 95bfd4fc8fa16004897ba35a9d8d717c, type: 3}
     volume: 0.4
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - clipName: PlayerFootStep1
     clip: {fileID: 8300000, guid: fc61dfa34483f5840af220d5aa4c5bcb, type: 3}

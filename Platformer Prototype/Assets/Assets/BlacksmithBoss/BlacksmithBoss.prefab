@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &869017454
 RectTransform:
   m_ObjectHideFlags: 0
@@ -509,7 +509,6 @@ GameObject:
   - component: {fileID: 3846383838588248243}
   - component: {fileID: 440671977523007810}
   - component: {fileID: 4878709958569911520}
-  - component: {fileID: 4878709958569911521}
   m_Layer: 7
   m_Name: BlacksmithBoss
   m_TagString: Untagged
@@ -692,9 +691,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8562945306254328942}
   spriteRenderer: {fileID: 8562945306254328941}
-  maxHealth: 5
-  healthBar: {fileID: 4878709957743859552}
-  canvasHP: {fileID: 869017457}
+  maxHealth: 1
+  healthBar: {fileID: 0}
   feetBoxColl: {fileID: 9088063659585721077}
   soundEvents: {fileID: 4878709958569911520}
 --- !u!114 &3846383838588248243
@@ -712,10 +710,9 @@ MonoBehaviour:
   blacksmithTransform: {fileID: 8562945306254328940}
   rb: {fileID: 8562945306254328939}
   playerTransform: {fileID: 0}
-  blacksmithHPCanvas: {fileID: 869017454}
   movSpeed: 1.5
   followRange: 2.31
-  stopFollowRange: 13
+  stopFollowRange: 17
   isFollowing: 0
   animator: {fileID: 8562945306254328942}
   seeingPoint: {fileID: 5037350954643366716}
@@ -765,22 +762,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcecc0b03d9cc7341bfc47aa541bfe63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4878709958569911521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8562945306254328943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4664f40a723a304eb7cfe450854f4db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerGO: {fileID: 0}
-  playerBaseColl: {fileID: 0}
-  playerFeetColl: {fileID: 0}
-  thisFeetColl: {fileID: 1150311245956241930}
 --- !u!1 &9088063659585721077
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,11 +928,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7907283065857213816, guid: b157fa959653ef943a656ed1a5480238, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7907283065857213816, guid: b157fa959653ef943a656ed1a5480238, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b157fa959653ef943a656ed1a5480238, type: 3}
@@ -960,14 +941,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2065971553486238314, guid: b157fa959653ef943a656ed1a5480238, type: 3}
   m_PrefabInstance: {fileID: 4878709957629811065}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4878709957743859552 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 198463001, guid: b157fa959653ef943a656ed1a5480238, type: 3}
-  m_PrefabInstance: {fileID: 4878709957629811065}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8904716d784ac74aae98be04747db50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
