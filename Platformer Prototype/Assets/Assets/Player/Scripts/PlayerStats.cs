@@ -18,6 +18,9 @@ public class PlayerStats : MonoBehaviour
     public HealthBar healthBar;
     //Stamina UI
     public StaminaBar staminaBar;
+    //Lose UI Elements
+    public GameObject endMsg;
+    public GameObject endTime;
 
     //Camera Shake
     public CameraShake cameraShake;
@@ -75,6 +78,12 @@ public class PlayerStats : MonoBehaviour
     void Death(){
         //Death Animation
         animator.SetBool("IsDead", true);
+
+        //Win UI
+        endMsg.SetActive(true);
+        endTime.SetActive(true);
+        endMsg.GetComponent<EndMsg>().Lose();
+        endTime.GetComponent<EndTime>().SetEndTime();
 
         //Disable Entity
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;

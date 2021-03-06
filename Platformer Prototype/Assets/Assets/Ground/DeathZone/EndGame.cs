@@ -9,7 +9,7 @@ public class EndGame : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            EditorApplication.isPlaying = false;
+            collision.GetComponentInParent<PlayerStats>().TakeDamage(100);
         }
         else{
             Destroy(collision.gameObject);

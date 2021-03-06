@@ -19,6 +19,10 @@ public class BlacksmithBossStats : MonoBehaviour
 
     //Audio
     public BlacksmithBossSoundEvents soundEvents;
+
+    //UI Win Elements
+    public GameObject endMsg;
+    public GameObject endTime;
     
     void Start()
     {
@@ -64,6 +68,12 @@ public class BlacksmithBossStats : MonoBehaviour
     void Death(){
         //Death Animation
         animator.SetBool("IsDead", true);
+
+        //Win UI
+        endMsg.SetActive(true);
+        endTime.SetActive(true);
+        endMsg.GetComponent<EndMsg>().Win();
+        endTime.GetComponent<EndTime>().SetEndTime();
 
         //Disable Entity
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;

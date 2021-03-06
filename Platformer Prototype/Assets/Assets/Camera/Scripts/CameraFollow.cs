@@ -20,7 +20,7 @@ public class CameraFollow : MonoBehaviour
         else{
             transform.position = new Vector3(Mathf.Lerp(transform.position.x, bossTarget.position.x, 2f * Time.deltaTime), Mathf.Lerp(transform.position.y, bossTarget.position.y, 2f * Time.deltaTime), transform.position.z);
             
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 9.64484f, 0.001f);
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 9.64484f, 0.01f);
         }
     }
 
