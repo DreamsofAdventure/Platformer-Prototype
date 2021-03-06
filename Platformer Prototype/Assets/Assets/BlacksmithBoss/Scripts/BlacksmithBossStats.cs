@@ -6,12 +6,13 @@ public class BlacksmithBossStats : MonoBehaviour
 {
     public Animator animator;
     public SpriteRenderer spriteRenderer;
+    public Rigidbody2D rb;
 
     public int maxHealth;
     int currentHealth;
 
     //HP UI
-    public HealthBar healthBar;
+    //public HealthBar healthBar;
     //public Canvas canvasHP;
 
     //FeetBoxCollider
@@ -23,6 +24,7 @@ public class BlacksmithBossStats : MonoBehaviour
     //UI Win Elements
     public GameObject endMsg;
     public GameObject endTime;
+    public GameObject endMenu;
     
     void Start()
     {
@@ -30,10 +32,10 @@ public class BlacksmithBossStats : MonoBehaviour
         currentHealth= maxHealth;
 
         //Sets starting HP for HP Bar
-        healthBar.SetMaxHealth(maxHealth);
+        //healthBar.SetMaxHealth(maxHealth);
 
         //Hides the HP canvas
-        //canvasHP.enabled = false;
+        //healthBar.enabled = false;
     }
 
     public void TakeDamage(int damage){
@@ -41,7 +43,7 @@ public class BlacksmithBossStats : MonoBehaviour
         currentHealth -= damage;
 
         //Set HP UI
-        healthBar.SetHealth(currentHealth);
+        //healthBar.SetHealth(currentHealth);
 
         soundEvents.SoundHit();
 
@@ -74,6 +76,7 @@ public class BlacksmithBossStats : MonoBehaviour
         endTime.SetActive(true);
         endMsg.GetComponent<EndMsg>().Win();
         endTime.GetComponent<EndTime>().SetEndTime();
+        endMenu.SetActive(true);
 
         //Disable Entity
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
@@ -81,6 +84,7 @@ public class BlacksmithBossStats : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         GetComponent<BlacksmithBossMovement>().enabled = false;
         GetComponent<BlacksmithBossCombat>().enabled = false;
+        rb.velocity = Vector2.zero;
         Destroy(feetBoxColl);
         //Flashes entity's sprite red to indicate damage
         StartCoroutine(DissapearCoroutine());

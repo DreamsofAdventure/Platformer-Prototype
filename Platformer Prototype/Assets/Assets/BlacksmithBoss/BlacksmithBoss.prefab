@@ -691,10 +691,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8562945306254328942}
   spriteRenderer: {fileID: 8562945306254328941}
-  maxHealth: 1
+  rb: {fileID: 8562945306254328939}
+  maxHealth: 30
   healthBar: {fileID: 0}
   feetBoxColl: {fileID: 9088063659585721077}
   soundEvents: {fileID: 4878709958569911520}
+  endMsg: {fileID: 0}
+  endTime: {fileID: 0}
+  endMenu: {fileID: 0}
 --- !u!114 &3846383838588248243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,7 +716,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   movSpeed: 1.5
   followRange: 2.31
-  stopFollowRange: 17
+  stopFollowRange: 31.8
   isFollowing: 0
   animator: {fileID: 8562945306254328942}
   seeingPoint: {fileID: 5037350954643366716}

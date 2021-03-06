@@ -314,6 +314,9 @@ MonoBehaviour:
   maxHealth: 10
   healthBar: {fileID: 0}
   staminaBar: {fileID: 0}
+  endMsg: {fileID: 0}
+  endTime: {fileID: 0}
+  endMenu: {fileID: 0}
   cameraShake: {fileID: 0}
 --- !u!114 &1094192886837436384
 MonoBehaviour:
@@ -338,7 +341,7 @@ MonoBehaviour:
   isLookingRight: 0
   rollSpeed: 8
   isRolling: 0
-  rollingCD: 3
+  rollingCD: 2
   rollingCDLeft: 0
   jumpForce: 18
   hangTime: 0.1

@@ -44,6 +44,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
+  - clipName: MenuAmbience
+    clip: {fileID: 8300000, guid: 0b797884f418d8b41a8848b8e574f24f, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   - clipName: ForestAmbience
     clip: {fileID: 8300000, guid: 6590b6e82dcc04540aa8a5d55fae7d1f, type: 3}
     volume: 0.7

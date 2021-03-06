@@ -1,17 +1,20 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
-    public static AudioManager instance;
+    //public static AudioManager instance;
+
+    //bool changedScene = false;
 
     // Start is called before the first frame update
     void Awake()
     {
-        if (instance == null){
+        /* if (instance == null){
             instance = this;
         }
         else{
@@ -19,7 +22,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject); */
 
         foreach(Sound s in sounds){
             s.source = gameObject.AddComponent<AudioSource>();
@@ -32,8 +35,21 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        Play("ForestAmbience");
+        if (SceneManager.GetActiveScene().name == "MainMenu"){
+            Play("MenuAmbience");
+        }else{
+            Play("ForestAmbience");
+        }
     }
+
+    /* void Update(){
+        if (SceneManager.GetActiveScene().name == "TestingScene" && changedScene == false){
+            Stop("MenuAmbience");
+            Play("ForestAmbience");
+
+            changedScene = true;
+        }
+    } */
 
     public void Play(string name){
         Sound s = Array.Find(sounds, sound => sound.clipName == name);

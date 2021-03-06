@@ -21,6 +21,7 @@ public class PlayerStats : MonoBehaviour
     //Lose UI Elements
     public GameObject endMsg;
     public GameObject endTime;
+    public GameObject endMenu;
 
     //Camera Shake
     public CameraShake cameraShake;
@@ -82,6 +83,7 @@ public class PlayerStats : MonoBehaviour
         //Win UI
         endMsg.SetActive(true);
         endTime.SetActive(true);
+        endMenu.SetActive(true);
         endMsg.GetComponent<EndMsg>().Lose();
         endTime.GetComponent<EndTime>().SetEndTime();
 
